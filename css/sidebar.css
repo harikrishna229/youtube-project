@@ -1,0 +1,38 @@
+.sidebar{
+    position: fixed;
+    
+    top:65px;
+    bottom: 0px;
+    left:0px;
+    background-color: white ;
+    display: flex;
+    flex-direction: column;
+    
+    flex-shrink: 0;
+    font-family: Arial;
+    
+}
+
+.sidebarlink{
+   height: 110px;
+   width: 100%;
+   background:  #f4f4f4;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   flex-shrink: 0;  
+   transition: opacity 0.15s;
+} 
+
+
+.sidebarlink div{
+    padding-top: 10px;
+}
+.sidebarlink:hover{
+    opacity: 0.6;
+}
+.sideimg{
+    width: 30px;
+    
+}

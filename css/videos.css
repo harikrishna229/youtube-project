@@ -1,0 +1,61 @@
+.thumbnail{
+ 
+    width: 100%;
+}
+.title{
+    margin-top: 10px;
+    line-height: 20px;
+   
+    
+}
+.author{
+    margin-top: 10px;
+}
+.stats{
+    margin-top: 10px;
+}
+.horzlay1{
+    
+    width: 50px;
+   
+    
+}
+.channelogo{
+    width: 40px;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+
+
+.container1{
+    
+    margin-right:10px ;
+    margin-bottom: 10px;
+   
+    
+}
+.videogrid{
+    display:grid;
+    background-color: #F4F4F4;
+}
+.videoinfo{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+@media screen and (max-width: 700px) {
+    .videogrid {
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (min-width: 701px) and (max-width: 1100px) {
+    .videogrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1101px) {
+    .videogrid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
