@@ -1,13 +1,11 @@
 .sidebar{
     position: fixed;
-    
     top:65px;
     bottom: 0px;
     left:0px;
     background-color: white ;
     display: flex;
     flex-direction: column;
-    
     flex-shrink: 0;
     font-family: Arial;
     
@@ -35,4 +33,9 @@
 .sideimg{
     width: 30px;
     
+}
+@media screen and (max-width: 510px) {
+    .sidebar{
+        display:none;
+    }
 }

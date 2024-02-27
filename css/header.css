@@ -40,18 +40,7 @@ z-index: 100;
 .middlesection button:hover{
     opacity: 0.6;
 }
-@media screen and (max-width: 780px) {
-    .middlesection{
-      
-       margin-left: 60px;
-       margin-right: 60px;
-    }
-}
-@media screen and (min-width: 1000px) {
-    .leftsection{
-        width: 300px;
-     }
-}
+
 .searchinput{
   height: 36px;
   flex: 1;
@@ -120,4 +109,26 @@ z-index: 100;
 
 .rightsection img:nth-child(4) {
     border-radius: 32px;
+}
+
+@media screen and (max-width: 510px) {
+    .middlesection{
+        display: none;
+    };
+    .rightsection{
+        display: none;
+    }
+    
+ }
+@media screen and (min-width: 511px) and (max-width: 780px) {
+    .middlesection{
+      
+       margin-left: 60px;
+       margin-right: 60px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .leftsection{
+        width: 300px;
+     }
 }
