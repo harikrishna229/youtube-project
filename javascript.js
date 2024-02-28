@@ -48,3 +48,36 @@
 //     // Append the new element to the parent element
 //     parentElement.append(newElement);
 // }
+function toggleSections() {
+    var middleSection = document.getElementsByClassName("middlesection")[0];
+    var leftSection = document.querySelector('.leftsection');
+    var rightSection = document.querySelector('.rightsection');
+    var searchInput = document.querySelector('.searchinput');
+    var searchBtn = document.querySelector('.searchbtn');
+var searchicon =document.querySelector('.searchicon');
+    
+
+    if (window.innerWidth <= 510) {
+        if (leftSection.style.display==="none") {
+            middleSection.style.display = "flex"
+            leftSection.style.display = "flex";
+            searchInput.style.display = "none";
+            rightSection.style.display = "flex";
+            searchBtn.style.cssText = "background-color:white;height:28px;border: none; width:30px;";
+            
+        }
+        else{
+            middleSection.style.display = "flex";
+            leftSection.style.display = "none";
+            rightSection.style.display = "none";
+            searchInput.style.display = "flex";
+            searchBtn.style.cssText = "background-color:rgb(240, 240, 240);height:28px;border: 1px solid rgb(198, 192, 192); width:40px;";
+            searchicon.style.cssText="margin-top: 3px";
+
+        }
+       
+        
+
+    }
+}
+
