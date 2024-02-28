@@ -40,7 +40,27 @@ z-index: 100;
 .middlesection button:hover{
     opacity: 0.6;
 }
+/* .backbutton{
+    border:none;
+    background-color: white;
+} */
+.back-button {
+    background-color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+    margin-right: 10px;
+    
+}
 
+.arrow {
+  
+    height: 15px;
+    font-size: 40px;
+        line-height: 15px;
+    display: inline-block;
+}
 .searchinput{
   height: 36px;
   flex: 1;
@@ -65,6 +85,11 @@ z-index: 100;
     border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 
+}
+.searchbtnmobile{
+    background-color:rgb(240, 240, 240) !important;
+    border: 1px solid rgb(198, 192, 192) !important;
+     width:40px !important;
 }
 .searchicon{
     height: 25px;

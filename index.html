@@ -1,12 +1,14 @@
 <!DOCTYPE html><!-- special line to tell browser use modern html-->
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/videos.css">
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/sidebar.css">  
         <link rel="stylesheet" href="css/mediaquery.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         
     </head>
     <body>
@@ -16,8 +18,12 @@
             <img class="youtubelogo" src="images/header images/youtube-logo.svg" alt="">
         </div>
         <div class="middlesection">
+            <!-- <button class="backbutton">&larr; </button> -->
+            <button class="back-button">
+                <span class="arrow">&larr;</span>
+            </button>
             <input class="searchinput" type="text" placeholder="search" >
-            <button class="searchbtn" onclick="toggleSections()"><img class="searchicon" src="images/header images/search.svg" alt=""></button>
+            <button class="searchbtn"><img class="searchicon" src="images/header images/search.svg" alt=""></button>
             <button class="voicebtn"><img class="voiceicon" src="images/header images/voice-search-icon.svg" alt=""></button>
             
         </div>
@@ -1159,7 +1165,7 @@
 
 
 
-
+    <script src="Jquery/jquery-3.7.1.js"></script>
     <script src="javascript.js"></script> 
     </div>
     </body>

@@ -1,8 +1,0 @@
-@media screen and (max-width: 510px) {
-    .middlesection{
-        display: none;
-    };
-    .rightsection{
-        display: none;
-    }
- }
