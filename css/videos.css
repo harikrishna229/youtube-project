@@ -38,12 +38,20 @@
 .videogrid{
     display:grid;
     background-color: #F4F4F4;
+    
 }
 .videoinfo{
     display: grid;
     grid-template-columns: 50px 1fr;
 }
-
+/* @media screen and (max-width: 510px)  {
+    .container1{
+        margin-right:0px ;
+       
+       
+    }
+   
+}
 @media screen and (min-width: 511px) and (max-width: 700px) {
     .videogrid {
         grid-template-columns: 1fr;
@@ -60,4 +68,4 @@
     .videogrid {
         grid-template-columns: 1fr 1fr 1fr;
     }
-}
+} */
