@@ -136,6 +136,39 @@ z-index: 100;
     border-radius: 32px;
 }
 
+.mobilemenu{
+    background-color: white;
+    width: 0px;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 200;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+
+}
+.mobilemenu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+  .mobilemenu a:hover {
+    color: #f1f1f1;
+  }
+  
+  .mobilemenu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
 /* @media screen and (max-width: 510px) {
     .middlesection{
         display: none;

@@ -36,6 +36,14 @@ $(document).ready(function() {
     }
 
     $(window).resize(handleResize);
+   
+    $(".hamburgermenu").click(function (e) { 
+        $(".mobilemenu").css("width", "250");
+       });
+
+   $(".closebtn").click(function (e) { 
+    $(".mobilemenu").css("width", "0");
+   });
 
 
   });
