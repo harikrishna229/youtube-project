@@ -12,11 +12,12 @@ $(document).ready(function() {
         
     });
     $(".searchinput").click(function (e) { 
+        if (window.innerWidth <= 510) {
         $(".searchinput").css("display", "flex");
         $(".searchinput").css("flex", "1");
         $(".leftsection").css("display", "none");
         $(".rightsection").css("display", "none");
-
+        }
 
         
     });

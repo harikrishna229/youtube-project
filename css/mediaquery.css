@@ -17,7 +17,7 @@
     .searchinput{
         display: none;
     }
-    .searchinput.active {
+    .searchinput:active {
         display: flex;
     }
 
