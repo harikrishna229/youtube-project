@@ -12,7 +12,7 @@ $(document).ready(function() {
         
     });
     $(".searchinput").click(function (e) { 
-        $(".searchinput").css("display", "flex");
+        $(".searchinput").css("display", "inline-block");
         
     });
     $(".back-button").click(function (e) { 
