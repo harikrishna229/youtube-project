@@ -44,7 +44,7 @@ $(document).ready(function() {
                     alert("resized");
 
         }
-        if (window.innerWidth <=510) {
+        if (window.innerWidth <=510 && $(".leftsection").css("display")==="flex" ) {
             
             $(".searchinput").css("display", "none");
             alert("resized");
