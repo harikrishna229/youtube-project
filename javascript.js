@@ -17,6 +17,8 @@ $(document).ready(function() {
         $(".searchinput").css("flex", "1");
         $(".leftsection").css("display", "none");
         $(".rightsection").css("display", "none");
+        $(".rightsection").css("z-index", "500");
+        $(".searchinput").css("width", "100px");
         }
 
         
