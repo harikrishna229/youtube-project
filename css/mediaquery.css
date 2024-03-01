@@ -17,6 +17,10 @@
     .searchinput{
         display: none;
     }
+    .searchinput.active {
+        display: flex;
+    }
+
     .voicebtn{
         display: none;
     }
