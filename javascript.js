@@ -8,30 +8,30 @@ $(document).ready(function() {
             $(".searchinput").css("display", "flex");
             $(".searchbtn").addClass("searchbtnmobile");
             $(".back-button").css("display", "inline-block");
-            alert("search button");
+           
         }
         
     });
-    $(".searchinput").click(function (e) { 
-        if (window.innerWidth <= 510) {
-        $(".searchinput").css("display", "flex");
-        $(".searchinput").css("flex", "1");
-        $(".leftsection").css("display", "none");
-        $(".rightsection").css("display", "none");
-        $(".rightsection").css("z-index", "500");
-        $(".searchinput").css("width", "100px");
-        alert("search input");
-        }
+    // $(".searchinput").click(function (e) { 
+    //     if (window.innerWidth <= 510) {
+    //     $(".searchinput").css("display", "flex");
+    //     $(".searchinput").css("flex", "1");
+    //     $(".leftsection").css("display", "none");
+    //     $(".rightsection").css("display", "none");
+    //     $(".rightsection").css("z-index", "500");
+    //     $(".searchinput").css("width", "100px");
+       
+    //     }
 
         
-    });
+    // });
     $(".back-button").click(function (e) { 
                 $(".leftsection").css("display", "flex");
                 $(".rightsection").css("display", "flex");
                 $(".searchinput").css("display", "none");
                 $(".searchbtn").removeClass("searchbtnmobile");
                 $(".back-button").css("display", "none");
-                alert("back button");
+               
         
     });
     function handleResize(){
@@ -41,13 +41,13 @@ $(document).ready(function() {
                     $(".searchinput").css("display", "flex");
                     $(".searchbtn").removeClass("searchbtnmobile");
                     $(".back-button").css("display", "none");
-                    alert("resized");
+                   
 
         }
         if (window.innerWidth <=510 && $(".leftsection").css("display")==="flex" ) {
             
             $(".searchinput").css("display", "none");
-            alert("resized");
+          
         }
     }
 
