@@ -11,6 +11,10 @@ $(document).ready(function() {
         }
         
     });
+    $(".searchinput").click(function (e) { 
+        $(".searchinput").css("display", "flex");
+        
+    });
     $(".back-button").click(function (e) { 
                 $(".leftsection").css("display", "flex");
                 $(".rightsection").css("display", "flex");
