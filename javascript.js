@@ -60,6 +60,54 @@ $(document).ready(function() {
    $(".closebtn").click(function (e) { 
     $(".mobilemenu").css("width", "0");
    });
+   var availableTags = [
+    "ActionScript",
+    "AppleScript",
+    "Asp",
+    "BASIC",
+    "C",
+    "C++",
+    "Clojure",
+    "COBOL",
+    "ColdFusion",
+    "Erlang",
+    "Fortran",
+    "Groovy",
+    "Haskell",
+    "Java",
+    "JavaScript",
+    "Lisp",
+    "Perl",
+    "PHP",
+    "Python",
+    "Ruby",
+    "Scala",
+    "Scheme","COBOL",
+    "ColdFusion",
+    "Erlang",
+    "Fortran",
+    "Groovy",
+    "Haskell",
+    "Java",
+    "JavaScript",
+    "Lisp",
+    "Perl",
+    "PHP",
+    "Python",
+    "Ruby",
+    "Scala",
+    "Scheme","hari","amulya",
+  ];
+   $( ".searchinput" ).autocomplete({
+    source: availableTags
+  });
+   
+
+
+
+
+
+
 
 
   });

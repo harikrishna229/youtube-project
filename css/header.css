@@ -61,6 +61,9 @@ z-index: 100;
         line-height: 15px;
     display: inline-block;
 }
+.search-container{
+    position: relative;
+}
 .searchinput{
   height: 36px;
   flex: 1;
