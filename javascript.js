@@ -12,7 +12,12 @@ $(document).ready(function() {
         
     });
     $(".searchinput").click(function (e) { 
-        $(".searchinput").css("display", "inline-block");
+        $(".searchinput").css("display", "flex");
+        $(".searchinput").css("flex", "1");
+        $(".leftsection").css("display", "none");
+        $(".rightsection").css("display", "none");
+
+
         
     });
     $(".back-button").click(function (e) { 
