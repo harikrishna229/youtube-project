@@ -4,58 +4,80 @@ var filtersearch=[];
 
 var videos=document.querySelector(".videogrid");
 var loader=document.querySelector(".loader-container");
-
-fetch("https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=15&playlistId=UUE750MuIvjaYeD5aGUjJcCQ&key=AIzaSyCFwuqhXldhb4KN8iSdZLMUyZgP_KZi8hM")
-.then(res=> res.json())
-.then(data=>{
-   //videos.innerHTML=data.items[0].snippet.title
-//    data.items.forEach(element => {
-//       videos.innerHTML +=`
-//       <a href="https://www.youtube.com/watch?v=${element.snippet.resourceId.videoId}" class="yt-videos" >
-//           <img src="${element.snippet.thumbnails.maxres.url}" />
-//           <h2>${element.snippet.title}</h2>
-//       </a>`
-//    });
-
-    data.items.forEach(element => {
-     loader.style.display="none"
-     videos.innerHTML+=`<div class="container1">
-                                <div>
-                                 
-                                </div>
-                                <div>
-                                <a href="https://www.youtube.com/watch?v=${element.snippet.resourceId.videoId}" class="yt-videos" ><img class="thumbnail" src="${element.snippet.thumbnails.maxres.url}"></a>
-                                </div>
-                                <div class="videoinfo">
-                                    <div class="horzlay1">
-                                        <img class="channelogo" src="images/video images/channel-1.jpg">
+function createTIles(){
+    fetch("https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=15&playlistId=UUE750MuIvjaYeD5aGUjJcCQ&key=AIzaSyCFwuqhXldhb4KN8iSdZLMUyZgP_KZi8hM")
+    .then(res=> res.json())
+    .then(data=>{
+        data.items.forEach(element => {
+        loader.style.display="none"
+        videos.innerHTML+=`<div class="container1">
+                                    <div>
+                                    
                                     </div>
-                                    <div class="horzlay2" >
-                                        <div><p class="title">${element.snippet.title}</p></div>
-                                        <div><p class="author">Ishan Sharma</p></div>
-                                        <div><p class="stats">364K views 3 months ago</p></div>
+                                    <div>
+                                    <a href="https://www.youtube.com/watch?v=${element.snippet.resourceId.videoId}" class="yt-videos" ><img class="thumbnail" src="${element.snippet.thumbnails.maxres.url}"></a>
                                     </div>
-                                
-                                </div>
-                                
-                            </div>`
+                                    <div class="videoinfo">
+                                        <div class="horzlay1">
+                                            <img class="channelogo" src="images/video images/channel-1.jpg">
+                                        </div>
+                                        <div class="horzlay2" >
+                                            <div><p class="title">${element.snippet.title}</p></div>
+                                            <div><p class="author">Ishan Sharma</p></div>
+                                            <div><p class="stats">364K views 3 months ago</p></div>
+                                        </div>
+                                    
+                                    </div>
+                                    
+                                </div>`
 
-     });
-        var a =data.items;
-        globalsearch=a.map(item=> item.snippet.title);
-        console.log(globalsearch);
-        console.log(data);
+        });
+            // var a =data.items;
+            // globalsearch = a.map(item => ({
+            //     title: item.snippet.title,
+            //     videoId: item.snippet.resourceId.videoId
+            //   }));
+            //var titles=globalsearch.map(item=> item.title);
+            globalsearch=data.items;
+            $( ".searchinput" ).autocomplete({
+                source: globalsearch.map(item=> item.snippet.title),
+                select: filteredvideos,
 
-        $( ".searchinput" ).autocomplete({
-            source: globalsearch,
-            select: filteredvideos
+            });
 
-          });
+    })
+}
+createTIles();
 
-})
 
 var filteredvideos = function (e,u){
-     alert("hfhfgd fgjdgfdj");
+    filtersearch=[];
+    filtersearch = globalsearch.filter(item=> item.snippet.title === u.item.value);
+    videos.innerHTML="";
+    filtersearch.forEach(element => {
+        videos.innerHTML=`<div class="container1">
+        <div>
+         
+        </div>
+        <div>
+        <a href="https://www.youtube.com/watch?v=${element.snippet.resourceId.videoId}" class="yt-videos" ><img class="thumbnail" src="${element.snippet.thumbnails.maxres.url}"></a>
+        </div>
+        <div class="videoinfo">
+            <div class="horzlay1">
+                <img class="channelogo" src="images/video images/channel-1.jpg">
+            </div>
+            <div class="horzlay2" >
+                <div><p class="title">${element.snippet.title}</p></div>
+                <div><p class="author">Ishan Sharma</p></div>
+                <div><p class="stats">364K views 3 months ago</p></div>
+            </div>
+        
+        </div> 
+        
+    </div>`
+    });
+   
+
 }
 
 $(document).ready(function() {
@@ -89,6 +111,7 @@ $(document).ready(function() {
                 $(".searchinput").css("display", "none");
                 $(".searchbtn").removeClass("searchbtnmobile");
                 $(".back-button").css("display", "none");
+                createTIles();
                
         
     });
