@@ -9,6 +9,16 @@ url : https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxRe
 
 
 https://www.youtube.com/watch?v=
+ <div class="loader"></div> 
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid lightblue;
+  border-right-color: orange;
+  animation: l2 1s infinite linear;
+}
+@keyframes l2 {to{transform: rotate(1turn)}}
 
 
 
